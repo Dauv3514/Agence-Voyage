@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin:0; padding:0;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+html {
+
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: var(--color--noir);
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: var(--color--bleu);
+        border-radius: 5rem;
+    }
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    background: var(--color--noir);
+    overflow-x: hidden;
+
+}
+
+// media queries
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    html {
+        
+        font-size: 50%;
+
+    }
+
+}

@@ -1,3 +1,9 @@
-h1 {
-    color: blue;
-}
+@import "./configuration/reset";
+@import "./configuration/variables";
+@import "./configuration/mixins";
+@import "./configuration/base";
+
+
+@import "./sections/header";
+@import "./sections/accueil";
+@import "./sections/reservation";

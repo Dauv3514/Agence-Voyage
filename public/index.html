@@ -8,11 +8,59 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./javascript/main.js"></script>
 </head>
 <body>
 
-    <h1> Bonjour </h1>
+<header id="header" class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="header__logo"> <i class="fa-solid fa-paper-plane"></i> Voyage </a>
+    <nav id="navbar" class="header__navbar">
+        <a href="#accueil"> Accueil </a>
+        <a href="#apropos"> A propos </a>
+        <a href="#destination"> Destination </a>
+        <a href="#services"> Services </a>
+        <a href="#gallerie"> Gallerie </a>
+        <a href="#blogs"> Blogs </a>
+    </nav>
+
+    <a href="#book-form" class="btn"> Réservez </a>
+
+</header>
+
+<section class="accueil" id="accueil">
+
+    <div class="accueil__contenu">
+        <span class="accueil__follow"> Suivez-nous </span>
+        <h3 class="accueil__inconnu"> vers l'inconnu... </h3>
+        <p class="accueil__description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia illum quod perspiciatis harum in possimus? Totam consequuntur officia quia?</p>
+        <a class="btn" href="#"> Réservez maintenant </a>
+    </div>
+
+</section>
+
+<section class="reservation" id="reservation">
+
+    <form class="reservation__form" action="">
+        <div class="reservation__inputBox">
+            <span> Ou ? </span>
+            <input type="text" placeholder="Lieu" value="">
+        </div>
+        <div class="reservation__inputBox">
+            <span> Quand ? </span>
+            <input type="date" value="">
+        </div>
+        <div class="reservation__inputBox">
+            <span> Combien ? </span>
+            <input type="number" placeholder="Nombre de voyageurs" value="">
+        </div>
+        <input type="submit" value="Trouvez maintenant" class="btn">
+    </form>
+
+</section>
     
+<script src="./javascript/main.js"></script>
+
 </body>
 </html>

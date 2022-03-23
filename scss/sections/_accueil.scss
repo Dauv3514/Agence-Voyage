@@ -1,0 +1,90 @@
+.accueil {
+
+    margin: 0 auto;
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 1rem;
+    background:linear-gradient(var(--color--bgnoir), var(--color--bgnoir)), url(../images/home-bg.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+
+    &__contenu {
+
+        text-align: center;
+
+    }
+
+    &__follow {
+
+        font-weight: bold;
+        color: transparent;
+        -webkit-text-stroke: .1rem var(--color--blanc); 
+        font-size: 4vw;
+        display: block;
+
+    }
+
+    &__inconnu {
+
+        font-size: 6vw;
+        color: var(--color--blanc);
+
+    }
+
+    &__description {
+
+        max-width: 60rem;
+        margin:1rem auto;
+        font-size: 1.4rem;
+        color: var(--color--leger);
+        line-height: 2;
+
+    }
+
+    .btn {
+
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: 1.7rem;
+        color: var(--color--bleu);
+        border: var(--color--border);
+        border-radius: 5rem;
+        background: none;
+    
+        &:hover {
+            background: var(--color--bleu);
+            color: var(--color--noir);
+        }
+        
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .accueil {
+
+        margin-top: 10rem;
+    
+        &__follow {
+    
+            font-size: 8vw;
+    
+        }
+    
+        &__inconnu {
+    
+            font-size: 9vw;
+    
+        }
+
+    }
+
+}
+

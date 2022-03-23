@@ -1,5 +1,313 @@
-h1 {
-  color: blue;
+@import url("https://fonts.googleapis.com/css2?family=Kreon&family=Poppins:wght@100;300;400;500;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+:root {
+  --color--bleu:#29d9d5;
+  --color--noir:#111;
+  --color--blanc:#fff;
+  --color--leger:#aaa;
+  --color--bg:#222;
+  --color--bgnoir:rgba(17,17,17,.7);
+  --color--border: 0.2rem solid var(--color--bleu);
+  --font-family-poppins: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--color--noir);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--color--bleu);
+  border-radius: 5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  background: var(--color--noir);
+  overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+.header__logo {
+  font-size: 2.5rem;
+  color: var(--color--blanc);
+  font-weight: bold;
+}
+.header__logo i {
+  color: var(--color--bleu);
+  padding-right: 0.5rem;
+}
+.header__navbar a {
+  font-size: 1.7rem;
+  color: var(--color--leger);
+  display: inline-block;
+  margin: 0 1rem;
+  font-family: var(--font-family-poppins);
+}
+.header__navbar a:hover {
+  color: var(--color--bleu);
+}
+.header .btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--color--bleu);
+  border: var(--color--border);
+  border-radius: 5rem;
+  background: none;
+}
+.header .btn:hover {
+  background: var(--color--bleu);
+  color: var(--color--noir);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--color--blanc);
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--color--bg);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header__navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header__navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+
+  #menu-btn {
+    display: inline-block;
+  }
+}
+.accueil {
+  margin: 0 auto;
+  margin-top: 9rem;
+  width: 90%;
+  border-radius: 1rem;
+  background: linear-gradient(var(--color--bgnoir), var(--color--bgnoir)), url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.accueil__contenu {
+  text-align: center;
+}
+.accueil__follow {
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem var(--color--blanc);
+  font-size: 4vw;
+  display: block;
+}
+.accueil__inconnu {
+  font-size: 6vw;
+  color: var(--color--blanc);
+}
+.accueil__description {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+.accueil .btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--color--bleu);
+  border: var(--color--border);
+  border-radius: 5rem;
+  background: none;
+}
+.accueil .btn:hover {
+  background: var(--color--bleu);
+  color: var(--color--noir);
+}
+
+@media (max-width: 768px) {
+  .accueil {
+    margin-top: 10rem;
+  }
+  .accueil__follow {
+    font-size: 8vw;
+  }
+  .accueil__inconnu {
+    font-size: 9vw;
+  }
+}
+.reservation {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: -5rem;
+  background: var(--color--bg);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+  padding: 3rem 2rem;
+}
+.reservation__form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.reservation__inputBox {
+  flex: 1 1 25rem;
+}
+.reservation__inputBox span {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+}
+.reservation__inputBox input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 5rem;
+  border: var(--color--border);
+  font-size: 1.6rem;
+  color: var(--color--leger);
+  text-transform: none;
+  background: none;
+  margin-top: 1rem;
+}
+.reservation .btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--color--bleu);
+  border: var(--color--border);
+  border-radius: 5rem;
+  background: none;
+}
+.reservation .btn:hover {
+  background: var(--color--bleu);
+  color: var(--color--noir);
+}
+.reservation .btn {
+  flex: 1 1 15rem;
 }
 
 /*# sourceMappingURL=style.css.map */

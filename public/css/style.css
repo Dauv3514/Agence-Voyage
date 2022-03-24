@@ -106,6 +106,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  padding: 3rem 9%;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -151,19 +155,6 @@ body {
 .header__navbar a:hover {
   color: var(--color--bleu);
 }
-.header .btn {
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: var(--color--bleu);
-  border: var(--color--border);
-  border-radius: 5rem;
-  background: none;
-}
-.header .btn:hover {
-  background: var(--color--bleu);
-  color: var(--color--noir);
-}
 
 #menu-btn {
   font-size: 2.5rem;
@@ -172,12 +163,12 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1100px) {
   .header {
     padding: 1.7rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header__navbar {
     position: absolute;
     top: 99%;
@@ -192,7 +183,8 @@ body {
   .header__navbar a {
     margin: 2rem;
     font-size: 2rem;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   #menu-btn {
@@ -230,23 +222,10 @@ body {
 }
 .accueil__description {
   max-width: 60rem;
-  margin: 1rem auto;
+  margin: 2rem auto;
   font-size: 1.4rem;
   color: var(--color--leger);
   line-height: 2;
-}
-.accueil .btn {
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: var(--color--bleu);
-  border: var(--color--border);
-  border-radius: 5rem;
-  background: none;
-}
-.accueil .btn:hover {
-  background: var(--color--bleu);
-  color: var(--color--noir);
 }
 
 @media (max-width: 768px) {
@@ -293,7 +272,295 @@ body {
   background: none;
   margin-top: 1rem;
 }
+.reservation ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 .reservation .btn {
+  flex: 1 1 15rem;
+}
+
+.apropos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.apropos__video-container {
+  flex: 1 1 42rem;
+}
+.apropos__video {
+  border-radius: 1rem;
+  width: 100%;
+}
+.apropos__controls {
+  text-align: center;
+  padding: 2rem 0;
+}
+.apropos__control-btn {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--color--blanc);
+  cursor: pointer;
+  margin: 0.7rem;
+}
+.apropos__control-btn:hover {
+  background: var(--color--bleu);
+}
+.apropos__contenu {
+  flex: 1 1 42rem;
+  margin-bottom: 5rem;
+}
+.apropos__pourquoinous {
+  color: var(--color--bleu);
+  font-size: 2rem;
+}
+.apropos__titre {
+  color: var(--color--blanc);
+  font-size: 4rem;
+  margin-top: 0.5rem;
+}
+.apropos__description {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+
+@media (max-width: 450px) {
+  .apropos {
+    font-size: 3.5rem;
+  }
+  .apropos__titre {
+    font-size: 3.5rem;
+  }
+}
+.destination .containerBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+.destination .containerBox .box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--color--bg);
+}
+.destination .containerBox .box:hover img {
+  transform: scale(1.2);
+}
+.destination .containerBox .box .image {
+  height: 20rem;
+  overflow: hidden;
+  width: 100%;
+}
+.destination .containerBox .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.destination .containerBox .box .contenu {
+  padding: 2rem;
+  text-align: center;
+}
+.destination .containerBox .box .contenu h3 {
+  font-size: 2rem;
+  color: var(--color--blanc);
+}
+.destination .containerBox .box .contenu p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+.destination .containerBox .box .contenu a {
+  font-size: 1.7rem;
+  color: var(--color--bleu);
+}
+.destination .containerBox .box .contenu a:hover i {
+  padding-left: 1rem;
+}
+.destination .containerBox .box .contenu a i {
+  padding-right: 0.5rem;
+}
+
+.services .boxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.services .boxContainer .boxService {
+  background: var(--color--bg);
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: center;
+  border: 0.2rem solid var(--color--noir);
+}
+.services .boxContainer .boxService:hover {
+  border: var(--color--border);
+}
+.services .boxContainer .boxService i {
+  font-size: 4rem;
+  color: var(--color--bleu);
+  margin-bottom: 2rem;
+}
+.services .boxContainer .boxService h3 {
+  font-size: 2rem;
+  color: var(--color--blanc);
+}
+.services .boxContainer .boxService p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+
+.gallerie .conteneurGalleries {
+  columns: 3 25rem;
+  column-gap: 1.5rem;
+}
+.gallerie .conteneurGalleries .boxGalleries {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+.gallerie .conteneurGalleries .boxGalleries img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.gallerie .conteneurGalleries .boxGalleries span {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+}
+.gallerie .conteneurGalleries .boxGalleries h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: var(--color--blanc);
+}
+
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.blogs .box-container .box {
+  border-radius: 1rem;
+  background: var(--color--bg);
+  overflow: hidden;
+}
+.blogs .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.blogs .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+.blogs .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.blogs .box-container .box .contenu {
+  padding: 2rem;
+}
+.blogs .box-container .box .contenu .lien {
+  font-size: 2rem;
+  color: var(--color--blanc);
+}
+.blogs .box-container .box .contenu .lien:hover {
+  color: var(--color--bleu);
+}
+.blogs .box-container .box .contenu p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+.blogs .box-container .box .contenu .icon {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blogs .box-container .box .contenu .icon a {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+}
+.blogs .box-container .box .contenu .icon a:hover {
+  color: var(--color--bleu);
+}
+.blogs .box-container .box .contenu .icon a i {
+  padding-right: 0.5rem;
+  color: var(--color--bleu);
+}
+
+.temoignages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.temoignages .contenu {
+  flex: 1 1 42rem;
+}
+.temoignages .contenu span {
+  font-size: 2rem;
+  color: var(--color--bleu);
+}
+.temoignages .contenu h3 {
+  font-size: 3rem;
+  color: var(--color--blanc);
+}
+.temoignages .contenu p {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  padding: 1rem 0;
+  line-height: 2;
+}
+.temoignages .box-container {
+  flex: 1 1 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.temoignages .box-container .box {
+  flex: 1 1 20rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: var(--color--bg);
+  border: 0.2rem solid var(--color--noir);
+}
+.temoignages .box-container .box:hover {
+  border: var(--color--border);
+}
+.temoignages .box-container .box p {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  line-height: 2;
+  color: var(--color--leger);
+}
+.temoignages .box-container .box .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.temoignages .box-container .box .user img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+.temoignages .box-container .box .user h3 {
+  font-size: 1.7rem;
+  color: var(--color--blanc);
+}
+.temoignages .box-container .box .user span {
+  color: var(--color--leger);
+  font-size: 1.5rem;
+}
+
+.btn {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.7rem;
@@ -302,12 +569,22 @@ body {
   border-radius: 5rem;
   background: none;
 }
-.reservation .btn:hover {
+.btn:hover {
   background: var(--color--bleu);
   color: var(--color--noir);
 }
-.reservation .btn {
-  flex: 1 1 15rem;
+
+.head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.head span {
+  color: var(--color--bleu);
+  font-size: 2rem;
+}
+.head h1 {
+  font-size: 4rem;
+  color: var(--color--blanc);
 }
 
 /*# sourceMappingURL=style.css.map */

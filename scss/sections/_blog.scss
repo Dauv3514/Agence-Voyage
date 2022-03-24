@@ -1,0 +1,82 @@
+.blogs .box-container { 
+
+    @include grid(32rem);
+
+    .box {
+
+        border-radius: 1rem;
+        background: var(--color--bg);
+        overflow: hidden;
+
+        &:hover {
+
+            .image img {
+
+                transform: scale(1.1);
+
+            }
+
+        }
+
+        .image {
+
+            height: 25rem;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+            }
+
+        }
+
+        .contenu {
+
+            padding: 2rem;
+
+            .lien {
+
+                font-size: 2rem;
+                color: var(--color--blanc);
+
+                &:hover {
+                    color: var(--color--bleu);
+                }
+
+            }
+
+            p {
+                padding:1rem 0;
+                font-size: 1.4rem;
+                color: var(--color--leger);
+                line-height: 2;
+            }
+
+            .icon {
+
+                padding-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                a {
+                    font-size: 1.4rem;
+                    color: var(--color--leger);
+
+                    &:hover {
+                        color: var(--color--bleu);
+                    }
+
+                    i {
+                        padding-right: .5rem;
+                        color: var(--color--bleu);
+                    }
+                }
+            }
+        }
+    }
+}

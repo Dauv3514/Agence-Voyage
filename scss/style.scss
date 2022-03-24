@@ -3,7 +3,15 @@
 @import "./configuration/mixins";
 @import "./configuration/base";
 
-
 @import "./sections/header";
 @import "./sections/accueil";
 @import "./sections/reservation";
+@import "./sections/apropos";
+@import "./sections/destination";
+@import "./sections/services";
+@import "./sections/galleries";
+@import "./sections/blog";
+@import "./sections/temoignages";
+
+@import "./composants/bouton";
+@import "./composants/titre-section";

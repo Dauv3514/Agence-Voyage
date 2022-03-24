@@ -43,21 +43,8 @@
         }
     }
 
-    .btn {
-
-        display: inline-block;
-        padding: 1rem 3rem;
-        font-size: 1.7rem;
-        color: var(--color--bleu);
-        border: var(--color--border);
-        border-radius: 5rem;
-        background: none;
-    
-        &:hover {
-            background: var(--color--bleu);
-            color: var(--color--noir);
-        }
-        
+    ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
     }
 
     .btn {
@@ -65,4 +52,5 @@
         flex: 1 1 15rem;
 
     }
+    
 }

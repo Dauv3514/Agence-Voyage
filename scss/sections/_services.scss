@@ -1,0 +1,36 @@
+.services .boxContainer {
+
+    @include grid(32rem);
+
+    .boxService {
+
+        background: var(--color--bg);
+        border-radius: 1rem;
+        padding:3rem;
+        text-align: center;
+        border:.2rem solid var(--color--noir);;
+
+        &:hover {
+            border: var(--color--border);
+        }
+
+        i {
+            font-size: 4rem;
+            color: var(--color--bleu);
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: var(--color--blanc);
+        }
+
+        p {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: var(--color--leger);
+            line-height: 2;
+        }
+    }
+    
+}

@@ -1,0 +1,31 @@
+.banniere {
+
+    background: linear-gradient(var(--color--bgnoir), var(--color--bgnoir)), url(../images/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0rem;
+    background-attachment: fixed;
+    text-align: center;
+
+    .contenu {
+        
+        span {
+            font-size: 2rem;
+            color: var(--color--bleu);
+        }
+
+        h3 {
+            font-size: 4rem;
+            color: var(--color--blanc);
+            margin-top: 1rem;
+        }
+
+        p {
+            max-width: 60rem;
+            margin: 1rem auto;
+            font-size: 1.4rem;
+            color: var(--color--leger);
+            line-height: 2;
+        }
+    }
+}

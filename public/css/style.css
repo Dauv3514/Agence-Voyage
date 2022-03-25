@@ -560,6 +560,115 @@ section {
   font-size: 1.5rem;
 }
 
+.banniere {
+  background: linear-gradient(var(--color--bgnoir), var(--color--bgnoir)), url(../images/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0rem;
+  background-attachment: fixed;
+  text-align: center;
+}
+.banniere .contenu span {
+  font-size: 2rem;
+  color: var(--color--bleu);
+}
+.banniere .contenu h3 {
+  font-size: 4rem;
+  color: var(--color--blanc);
+  margin-top: 1rem;
+}
+.banniere .contenu p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  line-height: 2;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box {
+  padding: 1rem 0;
+}
+.footer .box-container .box .logo {
+  padding-bottom: 1rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: var(--color--blanc);
+  padding: 1rem 0;
+}
+.footer .box-container .box p {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  padding: 1rem 0;
+  line-height: 2;
+}
+.footer .box-container .box p i {
+  padding-right: 0.5rem;
+  color: var(--color--bleu);
+}
+.footer .box-container .box .partage {
+  padding-top: 1rem;
+}
+.footer .box-container .box .partage a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  border: var(--color--border);
+  color: var(--color--bleu);
+  margin-right: 0.5rem;
+  text-align: center;
+}
+.footer .box-container .box .partage a:hover {
+  background: var(--color--bleu);
+  color: var(--color--noir);
+}
+.footer .box-container .box .liens {
+  font-size: 1.4rem;
+  color: var(--color--leger);
+  padding: 1rem 0;
+  display: block;
+}
+.footer .box-container .box .liens:hover {
+  color: var(--color--bleu);
+}
+.footer .box-container .box .liens:hover i {
+  padding-right: 2rem;
+}
+.footer .box-container .box .liens i {
+  padding-right: 0.5rem;
+  color: var(--color--bleu);
+}
+.footer .box-container .box form .email {
+  width: 100%;
+  border-radius: 5rem;
+  border: var(--color--border);
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: var(--color--leger);
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.credit {
+  background: var(--color--bg);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 2rem;
+  color: var(--color--leger);
+}
+.credit span {
+  color: var(--color--bleu);
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 3rem;

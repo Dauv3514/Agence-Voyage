@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
 
@@ -15,27 +17,27 @@
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="#" class="header__logo"> <i class="fa-solid fa-paper-plane"></i> VoYage </a>
+    <a data-aos="zoom-in-left" data-aos-delay="150"  href="#" class="header__logo"> <i class="fa-solid fa-paper-plane"></i> VoYage </a>
     <nav id="navbar" class="header__navbar">
-        <a href="#accueil"> Accueil </a>
-        <a href="#apropos"> A propos </a>
-        <a href="#destination"> Destination </a>
-        <a href="#services"> Services </a>
-        <a href="#gallerie"> Gallerie </a>
-        <a href="#blogs"> Blogs </a>
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="#accueil"> Accueil </a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="#apropos"> A propos </a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination"> Destination </a>
+        <a data-aos="zoom-in-left" data-aos-delay="750" href="#services"> Services </a>
+        <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallerie"> Gallerie </a>
+        <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs"> Blogs </a>
     </nav>
 
-    <a href="#book-form" class="btn"> Réservez </a>
+    <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btn"> Réservez </a>
 
 </header>
 
 <section class="accueil" id="accueil">
 
     <div class="accueil__contenu">
-        <span class="accueil__follow"> Suivez-nous </span>
-        <h3 class="accueil__inconnu"> vers l'inconnu... </h3>
-        <p class="accueil__description"> VoYage, vous propose d'embarquer dans des destinations féériques et plus surprenante les unes que les autres </p>
-        <a class="btn" href="#"> Réservez maintenant </a>
+        <span data-aos="fade-up" data-aos-delay="150" class="accueil__follow"> Suivez-nous </span>
+        <h3 data-aos="fade-up" data-aos-delay="300" class="accueil__inconnu"> vers l'inconnu... </h3>
+        <p data-aos="fade-up" data-aos-delay="450" class="accueil__description"> VoYage, vous propose d'embarquer dans des destinations féériques et plus surprenante les unes que les autres </p>
+        <a data-aos="fade-up" data-aos-delay="600" class="btn" href="#"> Réservez maintenant </a>
     </div>
 
 </section>
@@ -43,26 +45,26 @@
 <section class="reservation" id="reservation">
 
     <form class="reservation__form" action="">
-        <div class="reservation__inputBox">
+        <div data-aos="zoom-in" data-aos-delay="150" class="reservation__inputBox">
             <span> Ou ? </span>
             <input type="text" placeholder="Lieu" value="">
         </div>
-        <div class="reservation__inputBox">
+        <div data-aos="zoom-in" data-aos-delay="300" class="reservation__inputBox">
             <span> Quand ? </span>
             <input type="date" value="">
         </div>
-        <div class="reservation__inputBox">
+        <div data-aos="zoom-in" data-aos-delay="450" class="reservation__inputBox">
             <span> Combien ? </span>
             <input type="number" placeholder="Nombre de voyageurs" value="">
         </div>
-        <input type="submit" value="Trouvez maintenant" class="btn">
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="Trouvez maintenant" class="btn">
     </form>
 
 </section>
 
 <section class="apropos" id="apropos">
 
-    <div class="apropos__video-container">
+    <div class="apropos__video-container" data-aos="fade-right" data-aos-delay="300">
         <video src="images/about-vid-1.mp4" muted autoplay loop class="apropos__video"></video>
         <div class="apropos__controls">
             <span class="apropos__control-btn" data-src="images/about-vid-1.mp4"></span>
@@ -71,7 +73,7 @@
         </div>
     </div>
 
-    <div class="apropos__contenu">
+    <div class="apropos__contenu" data-aos="fade-left" data-aos-delay="600">
         <span class="apropos__pourquoinous"> Pourquoi nous-choisir ?</span>
         <h3 class="apropos__titre">La beauté de la nature vous attend </h3>
         <p class="apropos__description"> Un objectif unique : vous offrir une nouvelle façon de voyager libre,  authentique,  personnalisée. Nous sélectionnons au mieux les lieux pour vous faire vivre des moments inoubliables... </p>
@@ -299,13 +301,13 @@
 
 <section class="temoignages">
 
-    <div class="contenu" >
+    <div class="contenu" data-aos="fade-right" data-aos-delay="300">
         <span> Témoignages </span>
         <h3> Avis de nos anciens clients </h3>
         <p> La satisfaction de nos clients est notre prioritée. Chez VoYage nous tenons à ce que la prestation soit parfaite du début à la fin. </p>
     </div>
 
-    <div class="box-container">
+    <div class="box-container" data-aos="fade-right" data-aos-delay="600">
 
         <div class="box">
             <p> Un voyage très bien conçu, prenant parfaitement bien en compte nos considérations.</p>
@@ -410,8 +412,78 @@
 
 </section>
 
+<div class="banniere">
 
-<script src="./javascript/main.js"></script>
+    <div class="contenu" data-aos="zoom-in-up" data-aos-delay="300">
+        <span> Commencez l'aventure... </span>
+        <h3> Explorons ce monde </h3>
+        <p> Partez dans un univers riche et inconnu.</p>
+        <a href="#book-form" class="btn"> Réservez maintenant </a>
+    </div>
+
+</div>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="#" class="header__logo"> <i class="fa-solid fa-paper-plane"></i> VoYage </a>
+            <p> Nous vous faisons voyager en toute sécurité </p>
+            <div class="partage">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3> Liens rapides </h3>
+            <a href="#accueil" class="liens"> <i class="fas fa-arrow-right"></i> Accueil</a>
+            <a href="#apropos" class="liens"> <i class="fas fa-arrow-right"></i> A propos </a>
+            <a href="#destination" class="liens"> <i class="fas fa-arrow-right"></i> Destinations </a>
+            <a href="#services" class="liens"> <i class="fas fa-arrow-right"></i> Services </a>
+            <a href="#gallerie" class="liens"> <i class="fas fa-arrow-right"></i> Gallerie </a>
+            <a href="#blogs" class="liens"> <i class="fas fa-arrow-right"></i> Blogs </a>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3> Contact </h3>
+            <p> <i class="fas fa-map"></i> Lyon, France </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+            <p> <i class="fas fa-envelope"></i> voYage@gmail.com </p>
+            <p> <i class="fas fa-clock"></i> 8:00 - 19: 00 </p>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <h3> Newsletter </h3>
+            <p> Abonnez-vous pour voir les dernières actualités </p>
+            <form action="">
+                <input type="email" name="" placeholder="Entrez votre E-mail" class="email" id="">
+                <input type="submit" value="Abonne toi" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="credit"> Crée par <span> Mr Age </span> | all rights reserved !</div>
+<script src="./javascript/main.js"> 
+
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+
+    AOS.init ({
+        duration: 800,
+        offset: 150,
+    });
+
+</script>
+
 
 </body>
 </html>
